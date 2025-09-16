@@ -1,0 +1,21 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block main %}{% endblock %}
+
+{% block content %}
+<section class="box">
+    <h1>Where To Go?</h1>
+    <p class="description">
+        Where To Go — ваш особистий помічник у виборі цікавих місць для відвідування.
+        Тут ви можете переглянути список популярних локацій, додати своє улюблене місце та дізнатися, куди піти сьогодні.
+    </p>
+
+    <p class="todo-text">
+        Натисніть кнопку <strong>“Куди піти сьогодні?”</strong>, щоб система випадковим чином обрала для вас місце, враховуючи його рейтинг популярності.
+    </p>
+    <button class="todo-button">Куди піти сьогодні?</button>
+</section>
+
+    <img src="{% static 'main/img/trees.jpg' %}" alt="" id="main_image">
+{% endblock %}

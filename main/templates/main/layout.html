@@ -1,0 +1,34 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="{% static '/main/css/style.css' %}">
+    <title>{% block WhereToGo %}{% endblock %}</title>
+</head>
+<body>
+    <div class="header">
+        <div class="dropdown">
+            <button class="dropbtn">Куди йдемо?</button>
+            <div class="dropdown-content">
+                <a href="/">Головна</a>
+                <a href="/place.list">Список місць</a>
+                <a href="/add_place.list">Додай своє місце</a>
+            </div>
+        </div>
+        <div id="logo">Where To Go ?</div>
+    </div>
+    <div class="main_content">
+        {% block content %}
+        {% endblock %}
+    </div>
+
+    <div class="footer">
+        <div id="left-footer">Сайт створено 17.09.2025</div>
+        <div id="right-footer">Автор: Мельник Дарʼя</div>
+    </div>
+</body>
+</html>
+
+<! Можна так само підкоючити будь-куди файл з повторюваним кодом без extends за допомогою команди { % include '...' %}>

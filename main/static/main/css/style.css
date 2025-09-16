@@ -1,0 +1,175 @@
+/* https://coolors.co/acc6a6-98b797-809d7a-628765-2b4027 */
+
+body{
+    margin: 0;
+    min-height: 100vh;
+    background-color: #9DBC96;
+    display: flex;
+    flex-direction: column;
+}
+
+.header{
+    padding: 12px 24px;
+    background-color: #759978;
+    border-bottom: 4px solid #6B8865;
+    display: flex;
+}
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: transparent;
+    color: #ddd;
+    border: 2px solid #ddd;
+    border-radius: 4px;
+    padding: 6px 16px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.2s;
+    width: 160px;
+}
+
+.dropbtn:hover {
+    color: #fff;
+    border-color: #fff;
+    background-color: rgba(255,255,255,0.05);
+}
+
+.dropdown-content {
+    background-color: #628765;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    min-width: 160px;
+    margin-top: 2px;
+    display: none;
+    position: absolute;
+    z-index: 1;
+
+}
+
+.dropdown-content a {
+    color: #ddd;
+    padding: 10px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #2B4027;
+    color: #fff;
+}
+
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+
+#logo{
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    font-weight: bold;
+    margin-left: auto;
+    font-size: 25px;
+    padding: 4px 24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+.main_content {
+    flex: 1;
+    padding: 20px;
+    color: #1E2C1B;
+    font-size: 18px;
+}
+
+.box {
+    text-align: center;
+    padding: 60px 20px;
+    background: linear-gradient(to right, #759978, #9DBC96, #759978);
+    color: #fff;
+    border-radius: 8px;
+    margin: 20px;
+}
+
+.box h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+}
+
+.box .description,
+.box .todo-text {
+    font-size: 18px;
+    line-height: 1.6;
+    max-width: 700px;
+    margin: 0 auto 20px;
+}
+
+.todo-button {
+    background-color: #6B8865;
+    color: #fff;
+    border: none;
+    padding: 12px 28px;
+    font-size: 18px;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.todo-button:hover {
+    background-color: #557653;
+}
+
+#main_image {
+ width: 100%;
+    max-width: 98%;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 8px;
+    margin: 10px auto;
+    display: block;
+    overflow: hidden;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    background-color: #759978;
+    border-top: 4px solid #6B8865;
+    color: #fff;
+    text-shadow: 1px 1px 4px rgba(0,0,0,0.3);
+    font-size: 18px;
+    display: flex;
+    justify-content: space-between;
+    padding: 12px 24px;
+    box-sizing: border-box;
+}
+
+
+
+
+
+
