@@ -1,5 +1,37 @@
 {% extends 'main/layout.html' %}
+{% load static %}
 
-{% block Places %}{% endblock %}
+{% block title %}{% endblock %}
 
-{% block content %}Welcome to the adding{% endblock %}
+{% block content %}
+<div class="places-list">
+    <div class="places-info">
+        <h1>Поділись своїм місцем</h1>
+        <p>
+            ○ Тут можна поділитися своїми цікавими місцями з іншими користувачами.
+            Кожне місце має містити назву, опис, тип, локацію, рейтинг та фото.
+        </p>
+    </div>
+
+    <div>
+        <form method="post" enctype="multipart/form-data">
+            {% csrf_token %}
+        <p>Як назвати твоє улюблене місце?</p>
+            {{ form.name }}
+        <p>Розкажи, чому воно класне!</p>
+            {{ form.description }}
+        <p>Парк, кафе, музей чи щось інше?</p>
+            {{ form.type }}
+        <p>Де це знаходиться?</p>
+            {{ form.location }}
+        <p>Від 1 до 5 — твоя оцінка</p>
+            {{ form.rating }}
+        <p>Фото</p>
+            {{ form.photo }}
+
+
+            <button type="submit" class="btn-submit">Додати місце</button>
+        </form>
+    </div>
+</div>
+{% endblock %}

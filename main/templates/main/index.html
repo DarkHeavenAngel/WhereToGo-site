@@ -1,7 +1,7 @@
 {% extends 'main/layout.html' %}
 {% load static %}
 
-{% block main %}{% endblock %}
+{% block title %}{% endblock %}
 
 {% block content %}
 <section class="box">
@@ -14,7 +14,7 @@
     <p class="todo-text">
         Натисніть кнопку <strong>“Куди піти сьогодні?”</strong>, щоб система випадковим чином обрала для вас місце, враховуючи його рейтинг популярності.
     </p>
-    <button class="todo-button">Куди піти сьогодні?</button>
+    <a href="{% url 'random_place' %}" class="todo-button">Куди піти сьогодні?</a>
 </section>
 
     <img src="{% static 'main/img/trees.jpg' %}" alt="" id="main_image">

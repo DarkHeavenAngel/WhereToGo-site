@@ -1,0 +1,35 @@
+{% extends 'main/layout.html' %}
+{% load static %}
+
+{% block title %}{{ place.name }}{% endblock %}
+
+{% block content %}
+<div class="places-list">
+    <div class="places-info">
+        <h1>Деталі місця: {{ place.name }}</h1>
+        <p>
+            ○ Тут ти бачиш повну інформацію про обране місце: опис, тип, локацію, рейтинг та фото.
+        </p>
+    </div>
+
+    <div class="place-card">
+        <div class="place-content">
+        <img src="{% static 'main/img/trees.jpg' %}" alt="{{ place.name }}" class="place-img">
+            <h2>{{ place.name }}</h2>
+            <p>{{ place.description }}</p>
+            <p><b>Тип:</b> {{ place.type }}</p>
+            <p><b>Локація:</b>
+                {% if place.location %}
+                    {{ place.location }}
+                {% else %}
+                    Secret place 👀
+                {% endif %}
+            </p>
+            <p><b>Рейтинг:</b> {{ place.rating }} / 5 ⭐️</p>
+            <p><b>Дата відгуку:</b> {{ place.created_at }}</p>
+        </div>
+    </div>
+
+    <a href="{% url 'place_list' %}" class="btn-back">Повернутись до списку місць</a>
+</div>
+{% endblock %}
