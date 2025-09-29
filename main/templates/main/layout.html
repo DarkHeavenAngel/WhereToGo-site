@@ -4,8 +4,8 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="{% static '/main/css/style.css' %}">
-    <title>{% block WhereToGo %}{% endblock %}</title>
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <title>{% block title %}Where To Go?{% endblock %}</title>
 </head>
 <body>
     <div class="header">
@@ -13,8 +13,8 @@
             <button class="dropbtn">Куди йдемо?</button>
             <div class="dropdown-content">
                 <a href="/">Головна</a>
-                <a href="/place.list">Список місць</a>
-                <a href="/add_place.list">Додай своє місце</a>
+                <a href="{% url 'place_list' %}">Список місць</a>
+                <a href="{% url 'add_place_list' %}">Додай своє місце</a>
             </div>
         </div>
         <div id="logo">Where To Go ?</div>

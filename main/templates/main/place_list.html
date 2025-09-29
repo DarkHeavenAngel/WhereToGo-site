@@ -1,5 +1,53 @@
 {% extends 'main/layout.html' %}
+{% load static %}
 
-{% block Places %}{% endblock %}
 
-{% block content %}Welcome to the cafe{% endblock %}
+{% block title %}{% endblock %}
+
+{% block content %}
+
+<div class="places-list">
+    <div class="places-info">
+        <h1>Цікаві місця для відпочинку</h1>
+        <p>
+            ○ Тут відображається список цікавих місць для відпочинку.
+            Кожне місце містить назву, опис, тип, локацію, рейтинг та фото. Для детального перегляду натисніть на назву локації.
+        </p>
+    </div>
+
+    {% for place in places %}
+
+    <div class="place-card">
+        <div class="place-content">
+            <h2>
+                <a href="{% url 'place_detailed' forloop.counter0 %}">{{ place.name }}</a>
+            </h2>
+            <p>
+                {% if place.description %}
+                    {{ place.description|truncatewords:5}}
+                {% else %}
+                    Опису немає
+                {% endif %}
+            </p>
+            <p><b>Тип:</b> {{ place.type }}</p>
+            <p><b>Локація:</b>
+                {% if place.location %}
+                    {{ place.location }}
+                {% else %}
+                    Secret place 👀
+                {% endif %}
+            </p>
+            <p><b>Рейтинг:</b> {{ place.rating }} / 5 ️️️️⭐️</p>
+            <p><b>Дата відгуку:</b> {{ place.created_at }}</p>
+            <img src="{% static 'main/img/trees.jpg' %}" alt="" class="place-img">
+        </div>
+    </div>
+
+{% empty %}
+        <p>Cьогодні немає цікавих місць :( Завітайте пізніше</p>
+    {% endfor %}
+</div>
+
+
+{% endblock %}
+
